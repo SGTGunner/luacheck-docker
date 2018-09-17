@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t SGTGunner/luacheck .
+docker build -t sgtgunner/luacheck .
