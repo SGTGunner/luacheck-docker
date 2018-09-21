@@ -17,7 +17,7 @@ curl "$GITHUB_API/repos/$CI_REPO/statuses/$CI_COMMIT?access_token=$GITHUB_TOKEN"
 # Run Luacheck
 # cd `dirname $0`
 # npm run lint
-"/usr/local/bin/luacheck", "--config", ${PLUGIN_LUACHECKRC}, "/lua"
+./usr/local/bin/luacheck --config ${PLUGIN_LUACHECKRC} /lua
 EXIT_CODE=$?
 
 # Notify GitHub according to Luacheck exit code

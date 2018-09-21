@@ -18,8 +18,9 @@ RUN mkdir /lua \
   && apk del curl build-base \
   && rm -rf /var/cache/apk/*
 
-COPY drone-luacheck.sh /lua/drone-luacheck.sh
+COPY ./drone-luacheck.sh /lua/
+RUN chmod +x /lua/drone-luacheck.sh
 
 WORKDIR /lua
 
-ENTRYPOINT [ "/lua" ]
+ENTRYPOINT /lua/drone-luacheck.sh
