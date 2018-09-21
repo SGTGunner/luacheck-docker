@@ -1,3 +1,4 @@
+read_globals = {"resource_manifest_version"}
 ignore = { "611", "631" }
 include = { "resources/*" }
 self = false

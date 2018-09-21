@@ -18,8 +18,8 @@ RUN mkdir /lua \
   && apk del curl build-base \
   && rm -rf /var/cache/apk/*
 
-COPY luacheckrc /etc/luacheckrc
+COPY .luacheckrc /etc/.luacheckrc
 
 WORKDIR /lua
 
-CMD [ "/usr/local/bin/luacheck", "--config", "/etc/luacheckrc", "/lua" ]
+CMD [ "/usr/local/bin/luacheck", "--config", "/etc/.luacheckrc", "/lua" ]
